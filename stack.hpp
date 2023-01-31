@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:00:41 by lahammam          #+#    #+#             */
-/*   Updated: 2023/01/30 12:33:58 by lahammam         ###   ########.fr       */
+/*   Updated: 2023/01/31 12:07:24 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ private:
     std::vector<Type> c;
 
 public:
+
     stack(){};
     void push(Type ele)
     {
@@ -41,6 +42,7 @@ public:
     {
         return *(c.end() - 1);
     }
+    
     ~stack(){};
 };
 
