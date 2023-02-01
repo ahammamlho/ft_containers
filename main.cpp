@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:01:33 by lahammam          #+#    #+#             */
-/*   Updated: 2023/01/31 12:28:36 by lahammam         ###   ########.fr       */
+/*   Updated: 2023/02/01 15:41:41 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 #include<iostream>  
 #include<algorithm>  
 #include<vector>  
+#include <type_traits>
+#include <stack>
+
 using namespace std;  
 bool newpredicate(int m, int n)  
 {  
@@ -47,11 +50,11 @@ bool newpredicate(int m, int n)
   
   cout << "Using default comparison (operator<): ";  
   cout << lexicographical_compare(foo,foo+5,bar,bar+9);  
-  cout << '\n';  
-  
-  cout << "Using mycomp as comparison object: ";  
-  cout << lexicographical_compare(foo,foo+5,bar,bar+9,mycomp);  
-  cout << '\n';  
+  cout << '\n';
+
+  std::stack<int> t;
+  //    << "int: " << std::is_integral<int>::value << std::endl;
+  std::cout << "float: " << std::is_integral<float>::value << std::endl;
   
   return 0;  
     }  
