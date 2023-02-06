@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:00:41 by lahammam          #+#    #+#             */
-/*   Updated: 2023/01/31 12:07:24 by lahammam         ###   ########.fr       */
+/*   Updated: 2023/02/06 13:33:20 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,37 +15,85 @@
 
 #include <vector>
 
-template <class Type, class Container = std::vector<Type> >
+template <class _Tp, class _Container = std::vector<_Tp> >
 class stack
 {
-private:
+public:
+    typedef _Container                               container_type;
+    typedef typename container_type::value_type      value_type;
+    typedef typename container_type::reference       reference;
+    typedef typename container_type::const_reference const_reference;
+    typedef typename container_type::size_type       size_type;
+    
+protected:
     // Container c;
     std::vector<Type> c;
 
 public:
+    stack() : c(){};
+    stack(const stack &__q) : c(__q.c){};
 
-    stack(){};
-    void push(Type ele)
-    {
-        c.push_back(ele);
-    }
-    void pop()
-    {
-        c.pop_back();
-    }
+    stack& operator=(const stack& __q) {c = __q.c; return *this;}
 
-    unsigned int size()
-    {
-        return c.size();
-    }
-    Type top()
-    {
-        return *(c.end() - 1);
-    }
+    explicit stack(const container_type& __c) : c(__c) {}
+
+    bool empty() const {return c.empty(); }
+    size_type size() const {return c.size();}
+    reference top() {return c.back();}
+    const_reference top() const {return c.back();}
+
     
+    void push(const value_type& __v) {c.push_back(__v);}
+    void pop() {c.pop_back();}
+
+    template <class T1, class _C1>
+    friend bool operator==(const stack<T1, _C1>& __x, const stack<T1, _C1>& __y) 
+    {
+        return 0;
+    };
+    template <class T1, class _C1>
+    friend bool operator< (const stack<T1, _C1>& __x, const stack<T1, _C1>& __y)
+    {
+        return 0;
+    };
+
     ~stack(){};
 };
 
+template <class _Tp, class _Container>
+bool operator==(const stack<_Tp, _Container>& __x, const stack<_Tp, _Container>& __y)
+{
+    return __x.c == __y.c;
+}
 
+template <class _Tp, class _Container>
+bool operator< (const stack<_Tp, _Container>& __x, const stack<_Tp, _Container>& __y)
+{
+    return __x.c < __y.c;
+}
+
+template <class _Tp, class _Container>
+bool operator!=(const stack<_Tp, _Container>& __x, const stack<_Tp, _Container>& __y)
+{
+    return !(__x == __y);
+}
+
+template <class _Tp, class _Container>
+bool operator> (const stack<_Tp, _Container>& __x, const stack<_Tp, _Container>& __y)
+{
+    return __y < __x;
+}
+
+template <class _Tp, class _Container>
+bool operator>=(const stack<_Tp, _Container>& __x, const stack<_Tp, _Container>& __y)
+{
+    return !(__x < __y);
+}
+
+template <class _Tp, class _Container>
+bool operator<=(const stack<_Tp, _Container>& __x, const stack<_Tp, _Container>& __y)
+{
+    return !(__y < __x);
+}
 
 #endif

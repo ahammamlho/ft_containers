@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is_integral.hpp                                    :+:      :+:    :+:   */
+/*   pair.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/01 14:10:15 by lahammam          #+#    #+#             */
-/*   Updated: 2023/02/06 12:23:01 by lahammam         ###   ########.fr       */
+/*   Created: 2023/02/06 12:31:56 by lahammam          #+#    #+#             */
+/*   Updated: 2023/02/06 13:02:19 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-template <class T>
-struct is_integral
+template< class _T1, class _T2>
+struct pair
 {
-    
+    typedef _T1 first_type;
+    typedef _T2 second_type;
+
+    _T1 first;
+    _T2 second;
 };
+
+template< class _T1, class _T2>
+pair<_T1, _T2> make_pair(_T1 t, _T2 u)
+{
+    pair<_T1, _T2> pr;
+
+    pr.first = t;
+    pr.second = u;
+    return pr;
+}
