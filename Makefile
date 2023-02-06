@@ -6,7 +6,7 @@
 #    By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/30 12:00:16 by lahammam          #+#    #+#              #
-#    Updated: 2023/01/30 12:38:17 by lahammam         ###   ########.fr        #
+#    Updated: 2023/02/06 13:54:38 by lahammam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,9 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS =	main.cpp
 
-Include	= stack.hpp
+Include	= Containers/stack.hpp \
+			function/equal.hpp function/is_integral.hpp function/lexicographical_compare.hpp \
+			function/make_pair.hpp function/pair.hpp
 
 OBJSRC = ${SRCS:.cpp=.o}
 

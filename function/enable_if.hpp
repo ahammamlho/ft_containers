@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exmple.cpp                                         :+:      :+:    :+:   */
+/*   enable_if.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/30 12:34:57 by lahammam          #+#    #+#             */
-/*   Updated: 2023/01/30 12:37:58 by lahammam         ###   ########.fr       */
+/*   Created: 2023/02/06 14:06:19 by lahammam          #+#    #+#             */
+/*   Updated: 2023/02/06 14:07:03 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <iostream>
-#include <stack>
-#include <vector>
 
-int main()
+namespace ft
 {
-    std::stack<int, std::vector<int> > stk;
-    
-       stk.push(20);
-     stk.push(30);
-      stk.push(40);
-       stk.push(50);
-        stk.push(60);
-    while (stk.size())
+    template< bool B, class T = void >
+    struct enable_if
     {
-        std::cout << stk.top() << std::endl;
-        stk.pop();
-    }
+        
+    };
 }
