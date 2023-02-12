@@ -23,17 +23,19 @@ namespace ft
 
         _T1 first;
         _T2 second;
+        
+        pair(){}
     };
 
-    template <class _T1, class _T2>
-    pair<_T1, _T2> make_pair(_T1 t, _T2 u)
-    {
-        pair<_T1, _T2> pr;
+    // template <class _T1, class _T2>
+    // pair<_T1, _T2> make_pair(_T1 t, _T2 u)
+    // {
+    //     pair<_T1, _T2> pr;
 
-        pr.first = t;
-        pr.second = u;
-        return pr;
-    }
+    //     pr.first = t;
+    //     pr.second = u;
+    //     return pr;
+    // }
 }
 
 #endif

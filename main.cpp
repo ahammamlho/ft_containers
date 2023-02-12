@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:01:33 by lahammam          #+#    #+#             */
-/*   Updated: 2023/02/06 13:59:54 by lahammam         ###   ########.fr       */
+/*   Updated: 2023/02/09 15:27:49 by ahammam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int main()
 	// stk.pop();
 	// stk.pop();
 	// stk.pop();
+	
 
 	while (!stk2.empty())
 	{
