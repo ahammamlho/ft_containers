@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:01:33 by lahammam          #+#    #+#             */
-/*   Updated: 2023/02/09 15:27:49 by ahammam          ###   ########.fr       */
+/*   Updated: 2023/02/13 11:18:03 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,19 @@ int main()
 		cout << stk2.top() << " ";
 		stk2.pop();
 	}
+
+	 // defining a pair
+    pair<int, char> PAIR1;
+ 
+    // first part of the pair
+    PAIR1.first = 100;
+    // second part of the pair
+    PAIR1.second = 'G';
+ 
+    cout << PAIR1.first << " ";
+    cout << PAIR1.second << endl;
+
+	std::is_integral<PAIR1>::value;
+
+	return 0;
 }

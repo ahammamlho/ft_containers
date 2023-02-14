@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lexicographical_compare.hpp                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 12:14:13 by lahammam          #+#    #+#             */
-/*   Updated: 2023/02/09 15:16:54 by ahammam          ###   ########.fr       */
+/*   Updated: 2023/02/13 11:17:18 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ namespace ft
         {
             if (first2 == last2 || *first2 < *first1)
                 return false;
-            else if (*first1 < *first2) // first2 != last2 && *first2 >= *first1
+            else if (*first1 < *first2) 
                 return true;
             first1++;
             first2++;
