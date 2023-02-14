@@ -6,13 +6,12 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 10:08:19 by lahammam          #+#    #+#             */
-/*   Updated: 2023/02/13 10:16:27 by lahammam         ###   ########.fr       */
+/*   Updated: 2023/02/14 12:09:02 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <unistd.h>
-#include <iostream>
 #include <iostream>
 #include <stack>
+#include<iterator> 
 

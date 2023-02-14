@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:01:33 by lahammam          #+#    #+#             */
-/*   Updated: 2023/02/13 11:18:03 by lahammam         ###   ########.fr       */
+/*   Updated: 2023/02/14 12:09:06 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <stack>
 #include "Containers/stack.hpp"
+#include<iterator> 
 
 using namespace std;
 int main()
@@ -66,7 +67,17 @@ int main()
     cout << PAIR1.first << " ";
     cout << PAIR1.second << endl;
 
-	std::is_integral<PAIR1>::value;
+
+
+	vector<int> ar = { 1, 2, 3, 4, 5 };
+      
+    // Declaring iterator to a vector
+    vector<int>::iterator ptr;
+      
+    // Displaying vector elements using begin() and end()
+    cout << "The vector elements are : ";
+    for (ptr = ar.begin(); ptr < ar.end(); ptr++)
+        cout << *ptr << " ";
 
 	return 0;
 }
