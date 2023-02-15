@@ -6,17 +6,21 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:01:33 by lahammam          #+#    #+#             */
-/*   Updated: 2023/02/14 12:09:06 by lahammam         ###   ########.fr       */
+/*   Updated: 2023/02/15 13:10:06 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "stack.hpp"
+ 
 #include <unistd.h>
 #include <iostream>
 #include <iostream>
 #include <stack>
 #include "Containers/stack.hpp"
 #include<iterator> 
+#include <iostream>
+#include <vector>
+#include <list>
+#include <iterator>
 
 using namespace std;
 int main()
@@ -71,13 +75,18 @@ int main()
 
 	vector<int> ar = { 1, 2, 3, 4, 5 };
       
-    // Declaring iterator to a vector
+    
     vector<int>::iterator ptr;
-      
-    // Displaying vector elements using begin() and end()
+
+	std::cout << std::iterator_traits<ptr>::value_type << std::endl;
+
+ 
     cout << "The vector elements are : ";
     for (ptr = ar.begin(); ptr < ar.end(); ptr++)
         cout << *ptr << " ";
+
+	random_access_iterator_tag BDIte;
+ 
 
 	return 0;
 }
