@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 12:10:32 by lahammam          #+#    #+#             */
-/*   Updated: 2023/02/15 14:19:43 by lahammam         ###   ########.fr       */
+/*   Updated: 2023/02/16 15:39:22 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,6 @@
 
 namespace ft
 {
-    // template <class Iterator>
-    // class iterator_traits;template <class T> 
-    // class iterator_traits<T*>;template <class T> 
-    // class iterator_traits<const T*>;
     template<class Category, class T, class Distance = ptrdiff_t,
          class Pointer = T*, class Reference = T&>
     struct iterator
@@ -65,9 +61,15 @@ namespace ft
         typedef typename iterator_traits<Iterator>::pointer         pointer;
 
         reverse_iterator() : current(){};
-        explicit reverse_iterator(Iterator x) :  current(x) {}
+        explicit reverse_iterator(Iterator x)
+        {
+            current = x;
+        }
         template <class U>
-        reverse_iterator(const reverse_iterator<U> &u) : current(u.base()){};
+        reverse_iterator(const reverse_iterator<U> &u)
+        {
+            current = u.base();
+        };
 
         template <class U>
         reverse_iterator &operator=(const reverse_iterator<U> &u)
@@ -83,7 +85,9 @@ namespace ft
             Iterator tmp = current; 
             return *tmp; // why --tmp
         };
+        
         pointer operator->() const;
+        
         reverse_iterator &operator++()
         {
             --current; 
