@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 12:10:32 by lahammam          #+#    #+#             */
-/*   Updated: 2023/02/16 15:39:22 by lahammam         ###   ########.fr       */
+/*   Updated: 2023/02/20 22:18:28 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,19 @@ namespace ft
         reference operator[](difference_type n) const;
     
     };
+
+
+
+    template <class Iterator>
+    class random_access_iterator
+    {
+    protected:
+        Iterator _iter;
+
+    public:
+        
+    }
+
 }
 
 #endif
